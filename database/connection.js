@@ -5,8 +5,9 @@ const dbPassword = process.env.DB_PASS;
 
 
 const connect = () => {
-    mongoose.connect(``)
-
+    mongoose.connect(
+        `mongodb+srv://${dbUser}:${dbPassword}@cluster0.ev60pq8.mongodb.net/test`
+        );
     const connection = mongoose.connection;
 
     connection.on("error", () => {
